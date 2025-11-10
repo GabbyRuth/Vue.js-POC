@@ -7,6 +7,7 @@ import CounterButton from './components/CounterButton.vue'
 import FlippableCard from './components/FlippableCard.vue'
 
 const name = ref('Gabby')
+const whichFlipped = ref(-1)
 
 </script>
 
@@ -24,7 +25,10 @@ const name = ref('Gabby')
     <h3>Counter Button:</h3>
     <CounterButton/>
     <h3>"Flippable" Card:</h3>
-    <FlippableCard front="Moikka" back="Hello"/>
+    <FlippableCard :isFlipped = "whichFlipped == 0" @flip="whichFlipped = 0" @unflip="whichFlipped = -1"/>
+    <FlippableCard :isFlipped = "whichFlipped == 1" @flip="whichFlipped = 1" @unflip="whichFlipped = -1"/>
+    <FlippableCard :isFlipped = "whichFlipped == 2" @flip="whichFlipped = 2" @unflip="whichFlipped = -1"/>
+    <FlippableCard :isFlipped = "whichFlipped == 3" @flip="whichFlipped = 3" @unflip="whichFlipped = -1"/>
 </main>
 </template>
 

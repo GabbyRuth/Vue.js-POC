@@ -1,19 +1,12 @@
 <script setup>
-import { ref, defineProps } from 'vue'
-const props = defineProps(['front', 'back'])
-const flipped = ref(false)
-
+import { ref } from 'vue'
+const props = defineProps({ isFlipped: Boolean })
+const emit = defineEmits(['flip', 'unflip'])
 </script>
 
 <template>
-    <div class="card" @click="flipped = !flipped">
-        <div class="front" v-if="!flipped">
-            {{  props.front }}
-        </div>
-        <div class="back" v-else>
-            {{ props.back }}
-        </div>
-    </div>
+    <div class="card" v-if="isFlipped" @click="$emit('unflip')">front</div>
+    <div class="card" v-else  @click="$emit('flip')">back</div>
 </template>
 
 <style scoped>

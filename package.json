@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "vue-poc",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -14,7 +14,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue": "^3.5.22"
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
