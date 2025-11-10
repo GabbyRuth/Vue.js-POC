@@ -19,7 +19,12 @@ const whichFlipped = ref(-1)
       <HelloWorld msg="You did it!" />
     </div>
   </header>
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+  </nav>
   <main class="main-container">
+    <RouterView />
     <h3>Editable Span:</h3>
     <EditableSpan :value="name" @input="(val) => (name = val)" />
     <h3>Counter Button:</h3>
