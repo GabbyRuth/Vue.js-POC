@@ -22,6 +22,7 @@ const whichFlipped = ref(-1)
   <nav>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
+    <RouterLink to="/testing">Testing</RouterLink>
   </nav>
   <main class="main-container">
     <RouterView />
