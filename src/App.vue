@@ -4,7 +4,9 @@
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/testing">Testing</RouterLink>
-    <RouterLink to="/testid/123">TestID</RouterLink>
+    <RouterLink to="/testid/tests">TestID</RouterLink>
+    <RouterLink to="/auth">Auth</RouterLink>
+
   </nav>
   <div class="page-content">
     <RouterView />
