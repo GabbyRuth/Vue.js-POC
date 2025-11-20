@@ -9,10 +9,11 @@ const user = useCurrentUser()
 
 <template>
     <div v-if="!user">
+        <div>You're not logged in</div>
         <SignInButton/>
     </div>
     <div v-else>
-        <div> user is:{{user}}</div>
+        <h1> Welcome back, {{user.displayName}}!</h1>
         <SignOutButton/>
     </div>
 </template> 

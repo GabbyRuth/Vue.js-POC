@@ -2,7 +2,6 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useCurrentUser, useFirebaseAuth } from 'vuefire'
 
-const user = useCurrentUser()
 const auth = useFirebaseAuth()
 const provider = new GoogleAuthProvider();
 
